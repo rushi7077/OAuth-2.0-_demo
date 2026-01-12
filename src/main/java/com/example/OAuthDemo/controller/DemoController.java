@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class DemoController {
 
-
+    @GetMapping("/public")
+    public String publicApi(){
+        return "Public API";
+    }
 
     @GetMapping("/private")
     public String privateApi(OAuth2AuthenticationToken token){
